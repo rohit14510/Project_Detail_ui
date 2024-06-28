@@ -93,6 +93,39 @@ input[type=radio]:checked {
         rgba(0, 0, 0, 0.2) 0px 0px 0px inset;
 }
 
+/* Hide the default radio button */
+.custom-radio {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #DF7211; /* Red border color */
+    background-color: white; /* Unchecked background color */
+    cursor: pointer;
+    outline: none;
+}
+
+/* Checked state */
+.custom-radio:checked {
+    background-color: #DF7211; /* Red background color when checked */
+}
+
+/* Additional styling for checked state */
+.custom-radio:checked::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white; /* White inner circle color */
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 
 /* Slider Functionality */
@@ -404,11 +437,11 @@ input[type=radio]:checked {
   <body>
     <div class="container-fluid slider_img animate__animated animate__fadeInUp animate__slow	2s	">
       <section id="slider">
-        <input  type="radio" name="slider" id="s1" checked>
-        <input type="radio" name="slider" id="s2">
-        <input type="radio" name="slider" id="s3">
-        <input type="radio" name="slider" id="s4">
-        <input type="radio" name="slider" id="s5">
+        <input  type="radio" name="slider" id="s1" class="custom-radio" checked>
+        <input type="radio" name="slider" id="s2" class="custom-radio">
+        <input type="radio" name="slider" id="s3" class="custom-radio">
+        <input type="radio" name="slider" id="s4" class="custom-radio">
+        <input type="radio" name="slider" id="s5" class="custom-radio">
       
         <label for="s1" id="slide1"> <img class="" src="fine3.png" width="100%" alt="" /></label>
         <label for="s2" id="slide2"> <img class="" src="fine4.png" width="100%" alt="" /></label>
