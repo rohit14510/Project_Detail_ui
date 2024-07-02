@@ -197,7 +197,16 @@
       background-color: #df7211 !important;
       color: #df7211 !important;
     }
-
+    @media screen and (max-width: 600px) {
+      #mslider {
+     width: 40% !important;
+     height: 37vw !important;
+     
+    } 
+    input[type="radio"]{
+      margin: 6px 10px 0 0;
+    }
+  }
     input[type="radio"]:nth-child(5) {
       margin-right: 0px;
     }
@@ -262,7 +271,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
-
+ 
     /* Slider Functionality */
 
     /* Active Slide */
@@ -314,6 +323,18 @@
       box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
       transform: translate3d(-20%, 0, -100px);
     }
+
+    @media screen and (max-width: 600px) {
+    #mslider {
+      width: 35%;
+      height: ;
+    }
+
+    label {
+      flex: none; /* Reset flex behavior */
+      width: 100%; /* Full width for vertical stacking */
+    }
+  }
 .service_text{
   font-weight: 700;
   color: #5b5b5b;
@@ -379,7 +400,7 @@
 
 
 .card {
-  width: 220px;
+  
   height: 321px;
   background: #fff;
   border-top-right-radius: 10px;
@@ -392,6 +413,7 @@
   box-shadow: 0 14px 26px rgba(0,0,0,0.04);
   transition: all 0.3s ease-out;
   text-decoration: none;
+ 
 }
 
 .card:hover {
@@ -476,43 +498,19 @@
   height: 118px;
   border-radius: 50%;
   background: var(--bg-color);
-  top: 70px;
-  left: 50px;
+  top: 69px;
+  left: 67px;
   z-index: 0;
   transition: transform 0.3s ease-out;
 }
 
-
-    .Project_details {
-      padding: 2rem;
-      background-color: #df7211;
-      color: #ffffff;
-      border-radius: 17px;
-      animation-name: fadeInRight;
-      animation-duration: 2s;
-      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-        rgba(0, 0, 0, 0.2) 0px 0px 0px inset;
-    }
-    .Details_list {
-      list-style-type: disc;
-      color: #ffffff;
+@media screen and (max-width: 600px) {
+    .overlay {
+      display: none;
     }
 
-    .Details_list li h5,
-    .Details_list li p {
-      color: #ffffff; /* Black color for text inside <h5> and <p> tags */
-      font-weight: 500;
-    }
-    .Details_list li h5 {
-      font-weight: bold;
-    }
-
-    .service_list {
-      list-style-type: none;
-      padding: 0%;
-      color: #879495;
-    }
+  }
+   
     button {
       background: transparent;
       position: relative;
@@ -530,6 +528,7 @@
       color: #df7211;
       transition: color 0.3s 0.1s ease-out;
       text-align: center;
+      margin-top: 2em;
     }
 
     button span {
@@ -669,13 +668,7 @@
       class="container-fluid mslider_img animate__animated animate__fadeInUp animate__slow 2s mt-5"
     >
       <section id="mslider">
-        <input
-          type="radio"
-          name="mslider"
-          id="m1"
-          class="mcustom-radio"
-          checked
-        />
+        <input type="radio"name="mslider" id="m1" class="mcustom-radio" checked/>
         <input type="radio" name="mslider" id="m2" class="mcustom-radio" />
         <input type="radio" name="mslider" id="m3" class="mcustom-radio" />
         <input type="radio" name="mslider" id="m4" class="mcustom-radio" />
@@ -707,8 +700,8 @@
   <div class="row">
     <h1 class="text-center fw-bold" style="color: #5b5b5b">TECHOLOGY</h1>
   </div>
-  <div class=" mt-5 d-flex justify-content-around ">
-    <div class="col-lg-3">
+  <div class=" mt-5 row d-flex justify-content-around ">
+    <div class="col-lg-3 mt-lg-0 ">
       <a href="#" class="card credentialing">
         <div class="overlay"></div>
      <div class="circle">
@@ -720,7 +713,7 @@
      
    </a>
     </div>
-    <div class="col-lg-3">
+    <div class="col-lg-3 mt-lg-0 mt-5">
       <a href="#" class="card credentialing">
      <div class="overlay"></div>
   <div class="circle">
@@ -730,7 +723,7 @@
   <p>Html-5</p>
 </a>
     </div>
-    <div class="col-lg-3">
+    <div class="col-lg-3 mt-lg-0 mt-5">
       <a href="#" class="card credentialing">
      <div class="overlay"></div>
   <div class="circle">
@@ -740,7 +733,7 @@
   <p>Bootstrap-4</p>
 </a>
     </div>
-    <div class="col-lg-3">
+    <div class="col-lg-3 mt-lg-0 mt-5">
       <a href="#" class="card credentialing">
      <div class="overlay"></div>
   <div class="circle">
