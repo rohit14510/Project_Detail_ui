@@ -29,165 +29,463 @@
     body {
       background-color: white;
     }
-.slider_img{
- 
-}
-#slider {
-  position: relative;
-  width: 60%;
-  height: 32vw;
-  margin: 50px auto;
-  font-family: 'Helvetica Neue', sans-serif;
-  perspective: 1400px;
-  transform-style: preserve-3d;
-  
-}
+    .slider_img {
+    }
+    #slider {
+      position: relative;
+      width: 50%;
+      height: 32vw;
+      margin: 50px auto;
+      font-family: "Helvetica Neue", sans-serif;
+      perspective: 1400px;
+      transform-style: preserve-3d;
+    }
 
-input[type=radio] {
-  position: relative;
-  top: 108%;
-  left: 50%;
-  width: 18px;
-  height: 18px;
-  margin: 0 15px 0 0;
-  opacity: 0.4;
-  transform: translateX(-83px);
-  cursor: pointer;
-  background-color: #DF7211 !important;
-  color: #DF7211 !important;
-}
+    input[type="radio"] {
+      position: relative;
+      top: 108%;
+      left: 50%;
+      width: 18px;
+      height: 18px;
+      margin: 0 15px 0 0;
+      opacity: 0.4;
+      transform: translateX(-83px);
+      cursor: pointer;
+      background-color: #df7211 !important;
+      color: #df7211 !important;
+    }
 
+    input[type="radio"]:nth-child(5) {
+      margin-right: 0px;
+    }
 
-input[type=radio]:nth-child(5) {
-  margin-right: 0px;
-  
-}
+    input[type="radio"]:checked {
+      opacity: 1;
+      background-color: #df7211 !important;
+      color: #df7211 !important;
+    }
 
-input[type=radio]:checked {
-  opacity: 1;
-  background-color: #DF7211 !important;
-  color: #DF7211 !important;
-}
-
-
-
-
-#slider label,
-#slider label img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  color: white;
-  font-size: 70px;
-  font-weight: bold;
-  border-radius: 3px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 400ms ease;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    #slider label,
+    #slider label img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      color: white;
+      font-size: 70px;
+      font-weight: bold;
+      border-radius: 3px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 400ms ease;
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
         rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
         rgba(0, 0, 0, 0.2) 0px 0px 0px inset;
-}
+    }
 
-/* Hide the default radio button */
-.custom-radio {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    border: 2px solid #DF7211; /* Red border color */
-    background-color: white; /* Unchecked background color */
-    cursor: pointer;
-    outline: none;
-}
+    /* Hide the default radio button */
+    .custom-radio {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 2px solid #df7211; /* Red border color */
+      background-color: white; /* Unchecked background color */
+      cursor: pointer;
+      outline: none;
+    }
 
-/* Checked state */
-.custom-radio:checked {
-    background-color: #DF7211; /* Red background color when checked */
-}
+    /* Checked state */
+    .custom-radio:checked {
+      background-color: #df7211; /* Red background color when checked */
+    }
 
-/* Additional styling for checked state */
-.custom-radio:checked::before {
-    content: '';
-    display: block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: white; /* White inner circle color */
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+    /* Additional styling for checked state */
+    .custom-radio:checked::before {
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: white; /* White inner circle color */
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
+    /* Slider Functionality */
 
-/* Slider Functionality */
-
-/* Active Slide */
-#s1:checked ~ #slide1,
- #s2:checked ~ #slide2,
-  #s3:checked ~ #slide3,
-   #s4:checked ~ #slide4,
+    /* Active Slide */
+    #s1:checked ~ #slide1,
+    #s2:checked ~ #slide2,
+    #s3:checked ~ #slide3,
+    #s4:checked ~ #slide4,
     #s5:checked ~ #slide5 {
-  box-shadow: 0 13px 26px rgba(0,0,0, 0.3), 0 12px 6px rgba(0,0,0, 0.2);
-  transform: translate3d(0%, 0, 0px);
-}
+      box-shadow: 0 13px 26px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0, 0, 0, 0.2);
+      transform: translate3d(0%, 0, 0px);
+    }
 
-/* Next Slide */
-#s1:checked ~ #slide2,
- #s2:checked ~ #slide3,
-  #s3:checked ~ #slide4,
-   #s4:checked ~ #slide5,
+    /* Next Slide */
+    #s1:checked ~ #slide2,
+    #s2:checked ~ #slide3,
+    #s3:checked ~ #slide4,
+    #s4:checked ~ #slide5,
     #s5:checked ~ #slide1 {
-  box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
-  transform: translate3d(20%, 0, -100px);
-}
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+      transform: translate3d(20%, 0, -100px);
+    }
 
-
-/* Next to Next Slide */
-#s1:checked ~ #slide3,
- #s2:checked ~ #slide4,
-  #s3:checked ~ #slide5,
-   #s4:checked ~ #slide1,
+    /* Next to Next Slide */
+    #s1:checked ~ #slide3,
+    #s2:checked ~ #slide4,
+    #s3:checked ~ #slide5,
+    #s4:checked ~ #slide1,
     #s5:checked ~ #slide2 {
-  box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
-  transform: translate3d(40%, 0, -250px);
-}
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+      transform: translate3d(40%, 0, -250px);
+    }
 
-/* Previous to Previous Slide */
-#s1:checked ~ #slide4,
- #s2:checked ~ #slide5,
-  #s3:checked ~ #slide1,
-   #s4:checked ~ #slide2,
+    /* Previous to Previous Slide */
+    #s1:checked ~ #slide4,
+    #s2:checked ~ #slide5,
+    #s3:checked ~ #slide1,
+    #s4:checked ~ #slide2,
     #s5:checked ~ #slide3 {
-  box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
-  transform: translate3d(-40%, 0, -250px);
-}
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+      transform: translate3d(-40%, 0, -250px);
+    }
 
-/* Previous Slide */
-#s1:checked ~ #slide5,
- #s2:checked ~ #slide1,
-  #s3:checked ~ #slide2,
-   #s4:checked ~ #slide3,
+    /* Previous Slide */
+    #s1:checked ~ #slide5,
+    #s2:checked ~ #slide1,
+    #s3:checked ~ #slide2,
+    #s4:checked ~ #slide3,
     #s5:checked ~ #slide4 {
-  box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
-  transform: translate3d(-20%, 0, -100px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+      transform: translate3d(-20%, 0, -100px);
+    }
+
+    /* -----------------------------------------------Mobile Slider---------------------------------------------------------- */
+
+    #mslider {
+      position: relative;
+      width: 25%;
+      height: 32vw;
+      margin: 50px auto;
+      font-family: "Helvetica Neue", sans-serif;
+      perspective: 1400px;
+      transform-style: preserve-3d;
+    }
+
+    input[type="radio"] {
+      position: relative;
+      top: 108%;
+      left: 50%;
+      width: 18px;
+      height: 18px;
+      margin: 0 15px 0 0;
+      opacity: 0.4;
+      transform: translateX(-83px);
+      cursor: pointer;
+      background-color: #df7211 !important;
+      color: #df7211 !important;
+    }
+
+    input[type="radio"]:nth-child(5) {
+      margin-right: 0px;
+    }
+
+    input[type="radio"]:checked {
+      opacity: 1;
+      background-color: #df7211 !important;
+      color: #df7211 !important;
+    }
+
+    #mslider label,
+    #mslider label img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0px;
+      top: 0;
+      color: white;
+      font-size: 70px;
+      font-weight: bold;
+      border-radius: 3px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 400ms ease;
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px 0px 0px inset;
+    }
+
+    /* Hide the default radio button */
+    .mcustom-radio {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 2px solid #df7211; /* Red border color */
+      background-color: white; /* Unchecked background color */
+      cursor: pointer;
+      outline: none;
+    }
+
+    /* Checked state */
+    .mcustom-radio:checked {
+      background-color: #df7211; /* Red background color when checked */
+    }
+
+    /* Additional styling for checked state */
+    .mcustom-radio:checked::before {
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: white; /* White inner circle color */
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* Slider Functionality */
+
+    /* Active Slide */
+    #m1:checked ~ #mslide1,
+    #m2:checked ~ #mslide2,
+    #m3:checked ~ #mslide3,
+    #m4:checked ~ #mslide4,
+    #m5:checked ~ #mslide5 {
+      box-shadow: 0 13px 26px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0, 0, 0, 0.2);
+      transform: translate3d(0%, 0, 0px);
+    }
+
+    /* Next Slide */
+    #m1:checked ~ #mslide2,
+    #m2:checked ~ #mslide3,
+    #m3:checked ~ #mslide4,
+    #m4:checked ~ #mslide5,
+    #m5:checked ~ #mslide1 {
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+      transform: translate3d(20%, 0, -100px);
+    }
+
+    /* Next to Next Slide */
+    #m1:checked ~ #mslide3,
+    #m2:checked ~ #mslide4,
+    #m3:checked ~ #mslide5,
+    #m4:checked ~ #mslide1,
+    #m5:checked ~ #mslide2 {
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+      transform: translate3d(40%, 0, -250px);
+    }
+
+    /* Previous to Previous Slide */
+    #m1:checked ~ #mslide4,
+    #m2:checked ~ #mslide5,
+    #m3:checked ~ #mslide1,
+    #m4:checked ~ #mslide2,
+    #m5:checked ~ #mslide3 {
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+      transform: translate3d(-40%, 0, -250px);
+    }
+
+    /* Previous Slide */
+    #m1:checked ~ #mslide5,
+    #m2:checked ~ #mslide1,
+    #m3:checked ~ #mslide2,
+    #m4:checked ~ #mslide3,
+    #m5:checked ~ #mslide4 {
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+      transform: translate3d(-20%, 0, -100px);
+    }
+.service_text{
+  font-weight: 700;
+  color: #5b5b5b;
+}
+    .Client_details {
+      background-color: #df7211;
+      padding: 1rem;
+      margin-top: 4rem;
+      margin-bottom: 5rem;
+      border-radius: 17px;
+    }
+.Client_details_Content{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.Client_details_Content h5{
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.Client_details_Content p{
+  color: #41494F;
+  font-weight: 700;
+}
+
+.Client_details_box{
+  border-right: 1px solid white;
+}
+.service_icon_box{
+  display: flex;
+  
+}
+.service_icon_box h6{
+  color: #465e6a;
+}
+.service_icon{
+  width: 1.5rem ;
+  height: 1.5rem ;
+  border-radius: 50%;
+  background-color: #df7211;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: .5rem;
+}
+.service_icon i{
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 
 
+.credentialing {
+  --bg-color: #df7211;
+  --bg-color-light: #e2fced;
+  --text-color-hover: #4C5656;
+  --box-shadow-color: rgba(184, 249, 211, 0.48);
+}
+
+
+
+.card {
+  width: 220px;
+  height: 321px;
+  background: #fff;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 14px 26px rgba(0,0,0,0.04);
+  transition: all 0.3s ease-out;
+  text-decoration: none;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+  box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+    0 24px 46px var(--box-shadow-color);
+}
+
+.card:hover .overlay {
+  transform: scale(4) translateZ(0);
+}
+
+.card:hover .circle {
+  border-color: var(--bg-color-light);
+  background: var(--bg-color);
+}
+.card:hover .circle i{
+  color: #df7211;
+}
+
+.card:hover .circle:after {
+  background: var(--bg-color-light);
+}
+
+.card:hover p {
+  color: white;
+}
+
+.card:active {
+  transform: scale(1) translateZ(0);
+  box-shadow: 0 15px 24px rgba(0,0,0,0.11),
+    0 15px 24px var(--box-shadow-color);
+}
+
+.card p {
+  font-size: 20px;
+  color: #4C5656;
+  font-weight: 700;
+  margin-top: 30px;
+  z-index: 1000;
+  transition: color 0.3s ease-out;
+}
+
+
+.circle {
+  width: 131px;
+  height: 131px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease-out;
+}
+
+.circle:after {
+  content: "";
+  width: 118px;
+  height: 118px;
+  display: block;
+  position: absolute;
+  background: var(--bg-color);
+  border-radius: 50%;
+  top: 7px;
+  left: 7px;
+  transition: opacity 0.3s ease-out;
+}
+
+.circle i {
+  z-index: 10000;
+  font-size: 4rem;
+  color: white;
+  transform: translateZ(0);
+}
+
+.overlay {
+  width: 118px;
+  position: absolute; 
+  height: 118px;
+  border-radius: 50%;
+  background: var(--bg-color);
+  top: 70px;
+  left: 50px;
+  z-index: 0;
+  transition: transform 0.3s ease-out;
+}
 
 
     .Project_details {
       padding: 2rem;
-      background-color: #DF7211;
+      background-color: #df7211;
       color: #ffffff;
       border-radius: 17px;
       animation-name: fadeInRight;
@@ -209,72 +507,7 @@ input[type=radio]:checked {
     .Details_list li h5 {
       font-weight: bold;
     }
-    
 
-.card:hover {
-  transition-duration: 150ms;
-  box-shadow: 0 5px 20px 5px #00000044;
-}
-
-.card .glow {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  
-  background-image: radial-gradient(circle at 50% -20%, #ffffff22, #0000000f);
-}
-    .Contact_details {
-      background-color: #DF7211;
-      border-radius: 17px;
-      padding: 2rem;
-      color: white;
-    }
-    .Contact_list {
-      list-style-type: none;
-      padding: 0%;
-      margin-top: 3rem;
-    }
-    .Contact_list li {
-      padding-bottom: 2rem;
-    }
-    .icon_container {
-      width: 3rem;
-      height: 3rem;
-      border-radius: 50%;
-      background-color: #fc963d;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.5rem;
-    }
-    .icon_container:hover {
-      background-color: white;
-      color: #fc963d;
-      transition: 0.3s;
-    }
-    .images {
-      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-        rgba(0, 0, 0, 0.2) 0px 0px 0px inset;
-      border-radius: 1rem;
-    }
-    .image-container {
-      padding: 0.5rem;
-      overflow: hidden; /* Hide any overflow */
-      position: relative; /* Establish positioning context for absolute positioning */
-    }
-
-    .image-container img {
-      display: block;
-      transition: transform 1s ease; /* Smooth transition for transform */
-    }
-
-    .image-container:hover img {
-      transform: translateX(-10px); /* Shift image 10px to the left on hover */
-    }
     .service_list {
       list-style-type: none;
       padding: 0%;
@@ -290,11 +523,11 @@ input[type=radio]:checked {
       font-weight: 600;
       text-decoration: none;
       cursor: pointer;
-      border: 1px solid #DF7211;
+      border: 1px solid #df7211;
       border-radius: 25px;
       outline: none;
       overflow: hidden;
-      color: #DF7211;
+      color: #df7211;
       transition: color 0.3s 0.1s ease-out;
       text-align: center;
     }
@@ -323,164 +556,241 @@ input[type=radio]:checked {
 
     button:hover {
       color: #fff;
-      border: 1px solid #DF7211;
+      border: 1px solid #df7211;
     }
 
     button:hover::before {
-      box-shadow: inset 0 0 0 10em #DF7211;
+      box-shadow: inset 0 0 0 10em #df7211;
     }
-    .promo {
-  &.image {
-    display: block;
-    float: left;
-    width: 100%;
-    position: relative;
-    background: #354174;
-    overflow: hidden;
-    &#waypoint {
-      margin-top: 60px;
-    }
-    img {
-      display: block;
-      position: relative;
-      min-height: 100%;
-      max-width: 100%;
-      width: 100%;
-      opacity: 0.95;
-      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-      transition: opacity 0.35s, transform 0.35s;
-      -webkit-transform: scale3d(1.05, 1.05, 1);
-      transform: scale3d(1.05, 1.05, 1);
-    }
-    .caption {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      padding: 50px;
-      text-align: center;
-      box-sizing: border-box;
-      &:before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(255, 255, 255, 0.5);
-        pointer-events: none;
-        content: '';
-        -webkit-transition: -webkit-transform 0.6s;
-        transition: transform 0.6s;
-        -webkit-transform: scale3d(2.2, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, -100%, 0);
-        transform: scale3d(2.2, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, -100%, 0);
-      }
-      h3 {
-        color: white;
-        font-family: sans-serif;
-        opacity: 0;
-        margin: 75px 0 15px 0;
-        font-size: 28px;
-      }
-      a {
-        display: block;
-        margin-top: 20px;
-        color: white;
-        font-family: sans-serif;
-        text-transform: uppercase;
-        opacity: 0;
-      }
-      hr {
-        width: 0;
-        border-width: 0;
-      }
-    }
-    &.visible,
-    &:hover {
-      a,
-      h3 {
-        animation: fadein ease-in 1s;
-        animation-fill-mode: forwards;
-        animation-delay: 0.7s;
-      }
-      hr {
-        width: 100%;
-        border-width: 1px;
-        transition:  border-width,width 0.5s ease-in-out;
-        transition-delay: 0.5s;
-      }
-      img {
-        opacity: 0.4;
-        -webkit-transform: scale3d(1, 1, 1);
-        transform: scale3d(1, 1, 1);
-      }
-      .caption {
-      &:before {
-        -webkit-transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, 100%, 0);
-        transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, 100%, 0);
-      }
-      }
-    }
-  }
-}
-#waypoint {
-  pointer-events: none;
-}
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-
   </style>
   <body>
-    <div class="container-fluid slider_img animate__animated animate__fadeInUp animate__slow	2s	">
+    <!-- ------------------------------------------Desktop Slider Start-------------------------------------------- -->
+    <div
+      class="container-fluid slider_img animate__animated animate__fadeInUp animate__slow 2s"
+    >
       <section id="slider">
-        <input  type="radio" name="slider" id="s1" class="custom-radio" checked>
-        <input type="radio" name="slider" id="s2" class="custom-radio">
-        <input type="radio" name="slider" id="s3" class="custom-radio">
-        <input type="radio" name="slider" id="s4" class="custom-radio">
-        <input type="radio" name="slider" id="s5" class="custom-radio">
-      
-        <label for="s1" id="slide1"> <img class="" src="fine3.png" width="100%" alt="" /></label>
-        <label for="s2" id="slide2"> <img class="" src="fine4.png" width="100%" alt="" /></label>
-        <label for="s3" id="slide3"> <img class="" src="fine6.png" width="100%" alt="" /></label>
-        <label for="s4" id="slide4"> <img class="" src="fine7.png" width="100%" alt="" /></label>
-        <label for="s5" id="slide5"> <img class="" src="fineui1.png" width="100%" alt="" /></label>
+        <input
+          type="radio"
+          name="slider"
+          id="s1"
+          class="custom-radio"
+          checked
+        />
+        <input type="radio" name="slider" id="s2" class="custom-radio" />
+        <input type="radio" name="slider" id="s3" class="custom-radio" />
+        <input type="radio" name="slider" id="s4" class="custom-radio" />
+        <input type="radio" name="slider" id="s5" class="custom-radio" />
+
+        <label for="s1" id="slide1">
+          <img class="" src="fine3.png" width="100%" alt=""
+        /></label>
+        <label for="s2" id="slide2">
+          <img class="" src="fine4.png" width="100%" alt=""
+        /></label>
+        <label for="s3" id="slide3">
+          <img class="" src="fine6.png" width="100%" alt=""
+        /></label>
+        <label for="s4" id="slide4">
+          <img class="" src="fine7.png" width="100%" alt=""
+        /></label>
+        <label for="s5" id="slide5">
+          <img class="" src="fineui1.png" width="100%" alt=""
+        /></label>
       </section>
-      
     </div>
-    <!-- ------------------------------------------Slider End-------------------------------------------- -->
-    <div class="container " style="margin-top: 6rem;">
-        <div class="container">
-          <h1 class="text-center fw-bold animate__animated animate__fadeInLeft animate__slow	2s" style="color: #5b5b5b">POSHIDA</h1>
-          <p class="text-center fw-bold animate__animated animate__fadeInLeft animate__slow	2s" style="color: #465e6a">
-            We're your Creative Agency, since 2010
-          </p>
-          <p class="animate__animated animate__fadeInRight animate__slow	2s" style="color: #879495">
-            In the vibrant tapestry of Indian fashion, Poshida, Grace In Every
-            Stitch stands out as a beacon of style and tradition. Established in
-            2018 by the visionary Usha Singh, our brand has become synonymous
-            with quality, affordability, and timeless fashion. From the heart of
-            India, we bring you an exquisite range of Women's wear, Men's wear,
-            Kids wear, and Accessories, ensuring that every family member can
-            indulge in the joy of fashionable clothing.
+    <!-- ------------------------------------------Desktop Slider End-------------------------------------------- -->
+    <div class="container mb-5" style="margin-top: 6rem">
+      <div class="container">
+        <h1
+          class="text-center fw-bold animate__animated animate__fadeInLeft animate__slow 2s"
+          style="color: #5b5b5b"
+        >
+          POSHIDA
+        </h1>
+        <p
+          class="text-center fw-bold animate__animated animate__fadeInLeft animate__slow 2s"
+          style="color: #465e6a"
+        >
+          We're your Creative Agency, since 2010
+        </p>
+        <p
+          class="animate__animated animate__fadeInRight animate__slow 2s"
+          style="color: #879495;text-align: justify; text-align-last: center; "
+        >
+          In the vibrant tapestry of Indian fashion, Poshida, Grace In Every
+          Stitch stands out as a beacon of style and tradition. Established in
+          2018 by the visionary Usha Singh, our brand has become synonymous with
+          quality, affordability, and timeless fashion. From the heart of India,
+          we bring you an exquisite range of Women's wear, Men's wear, Kids
+          wear, and Accessories, ensuring that every family member can indulge
+          in the joy of fashionable clothing.
 
-            <span class="fw-bold">A SEAMLESS BLEND OF TRADITION AND TREND</span>
+          <span class="fw-bold">A SEAMLESS BLEND OF TRADITION AND TREND</span>
 
-            Poshida takes pride in offering a diverse collection of clothing
-            that seamlessly blends the richness of Indian traditions with
-            contemporary fashion trends. Our commitment to quality is reflected
-            in premium cotton fabrics, providing comfort without compromising
-            style. From ethnic ensembles to chic casual wear, Poshida is your
-            go-to destination for all things fashion.
-          </p>
-         
-        </div> 
+          Poshida takes pride in offering a diverse collection of clothing that
+          seamlessly blends the richness of Indian traditions with contemporary
+          fashion trends. Our commitment to quality is reflected in premium
+          cotton fabrics, providing comfort without compromising style. From
+          ethnic ensembles to chic casual wear, Poshida is your go-to
+          destination for all things fashion.
+        </p>
+       
       </div>
     </div>
-    <div class="container mt-4 mb-5">
+
+       <!-- ------------------------------------------Client Details Start-------------------------------------------- -->
+       <div class="container Client_details">
+        <div class="row Client_details_Content">
+          <div class="col-lg-3 Client_details_box">
+            <h5>Project Name</h5>
+            <p>POSHIDA</p>
+          </div>
+          <div class="col-lg-3  Client_details_box">
+            <h5>Client</h5>
+            <p>Usha Singh</p>
+          </div>
+          <div class="col-lg-3  Client_details_box">
+            <h5>Category</h5>
+            <p>E-Commerce</p>
+          </div>
+          <div class="col-lg-3 ">
+            <h5>Project Year</h5>
+            <p>August 12, 2023</p>
+          </div>
+          <!-- <div class="col-lg-2">
+            <h5>Techology</h5>
+            <p>CodeIgniter, PHP, HTML 5, Bootstrap 4, CSS, MVC Framework</p>
+          </div> -->
+        </div>
+      </div>
+      <!-- ------------------------------------------Client Details End-------------------------------------------- -->
+    <!-- ------------------------------------------Mobile Slider Start-------------------------------------------- -->
+    <div
+      class="container-fluid mslider_img animate__animated animate__fadeInUp animate__slow 2s mt-5"
+    >
+      <section id="mslider">
+        <input
+          type="radio"
+          name="mslider"
+          id="m1"
+          class="mcustom-radio"
+          checked
+        />
+        <input type="radio" name="mslider" id="m2" class="mcustom-radio" />
+        <input type="radio" name="mslider" id="m3" class="mcustom-radio" />
+        <input type="radio" name="mslider" id="m4" class="mcustom-radio" />
+        <input type="radio" name="mslider" id="m5" class="mcustom-radio" />
+
+        <label for="m1" id="mslide1">
+          <img class="" src="mui-1.png" width="100%" alt=""
+        /></label>
+        <label for="m2" id="mslide2">
+          <img class="" src="mui-2.png" width="100%" alt=""
+        /></label>
+        <label for="m3" id="mslide3">
+          <img class="" src="mui-3.png" width="100%" alt=""
+        /></label>
+        <label for="m4" id="mslide4">
+          <img class="" src="mui-4.png" width="100%" alt=""
+        /></label>
+        <label for="m5" id="mslide5">
+          <img class="" src="mui-5.png" width="100%" alt=""
+        /></label>
+      </section>
+    </div>
+
+    <!-- ------------------------------------------Mobile Slider End-------------------------------------------- -->
+
+ 
+       <!-- ------------------------------------------Technocal Start-------------------------------------------- -->
+<div class="container mb-5" style="margin-top: 6rem;">
+  <div class="row">
+    <h1 class="text-center fw-bold" style="color: #5b5b5b">TECHOLOGY</h1>
+  </div>
+  <div class=" mt-5 d-flex justify-content-around ">
+    <div class="col-lg-3">
+      <a href="#" class="card credentialing">
+        <div class="overlay"></div>
+     <div class="circle">
+       
+      <i class="fa-brands fa-php"></i>
+   
+     </div>
+     <p>CodeIgniter, PHP</p>
+     
+   </a>
+    </div>
+    <div class="col-lg-3">
+      <a href="#" class="card credentialing">
+     <div class="overlay"></div>
+  <div class="circle">
+    <i class="fa-brands fa-html5"></i>
+
+  </div>
+  <p>Html-5</p>
+</a>
+    </div>
+    <div class="col-lg-3">
+      <a href="#" class="card credentialing">
+     <div class="overlay"></div>
+  <div class="circle">
+
+    <i class="fa-brands fa-bootstrap"></i>
+  </div>
+  <p>Bootstrap-4</p>
+</a>
+    </div>
+    <div class="col-lg-3">
+      <a href="#" class="card credentialing">
+     <div class="overlay"></div>
+  <div class="circle">
+
+    <i class="fa-brands fa-css3"></i>
+  </div>
+  <p>Css</p>
+</a>
+    </div>
+  </div>
+ 
+
+
+</div>
+       <!-- ------------------------------------------Technocal End-------------------------------------------- -->  
+ <!-- ------------------------------------------Service start-------------------------------------------- -->
+  <div class="container">
+    <div class="row">
+      <h1 class="service_text mb-3">SERVICES</h1>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="service_icon_box">
+          <p class="service_icon"><i class="fa-solid fa-check"></i><p>
+            <h6 class="m-1 fw-bold">Responsive & Mobile Friendly Website.</h6>
+        </div>
+        <div class="service_icon_box">
+          <p class="service_icon"><i class="fa-solid fa-check"></i><p>
+            <h6 class="m-1 fw-bold">Back-End Development.</h6>
+        </div>
+        <div class="service_icon_box">
+          <p class="service_icon"><i class="fa-solid fa-check"></i><p>
+            <h6 class="m-1 fw-bold">SEO, SMO.</h6>
+        </div>
+        
+      </div>
+      <div class="col-lg-4">
+        <div class="service_icon_box">
+          <p class="service_icon"><i class="fa-solid fa-check"></i><p>
+            <h6 class="m-1 fw-bold">Content Management Systems.</h6>
+        </div>
+        <div class="service_icon_box">
+          <p class="service_icon"><i class="fa-solid fa-check"></i><p>
+            <h6 class="m-1 fw-bold">Graphic Designing.</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- ------------------------------------------Service End-------------------------------------------- -->
+    <!-- <div class="container mt-4 mb-5">
       <div class="row">
         <div class="col-lg-4">
           <div class="Project_details">
@@ -509,137 +819,38 @@ input[type=radio]:checked {
             </ul>
           </div>
         </div>
-        <!-- <div class="col-lg-4">
-          <div class="Contact_details animate__animated animate__zoomIn">
-            <h2 class="text-center">Dont Hesitate to <br />Contact Us</h2>
-            <ul class="Contact_list">
-              <li>
-                <div class="row">
-                  <div class="col-lg-3 icon_container">
-                    <i class="fas fa-phone-alt"></i>
-                  </div>
-                  <div class="col-lg-9">
-                    <p class="m-0">Call Us</p>
-                    <h5>+91 94140 11111</h5>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="row">
-                  <div class="col-lg-3 icon_container">
-                    <i class="fa-solid fa-envelope"></i>
-                  </div>
-                  <div class="col-lg-9">
-                    <p class="m-0">Write to us</p>
-                    <h5>info@example.com</h5>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="row">
-                  <div class="col-lg-3 icon_container">
-                    <i class="fa-solid fa-clock"></i>
-                  </div>
-                  <div class="col-lg-9">
-                    <p class="m-0">Office hours</p>
-                    <h5>Mon-Sat 9:00 - 7:00</h5>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div> -->
-     <div class="col-lg-8">
-    <div class="row">
-      <div class="col-lg-6 p-2">
-        <div class='content'>
-          <div class="promo image">
-            <img src="fine3.png">
-            <div class="caption">
-              <h3> Title</h3>
-              <hr>
-            </div>
-          </div>         
-        </div>
-      </div>
-      <div class="col-lg-6 p-2">
-        <div class='content'>
-          <div class="promo image">
-            <img src="fine5.png">
-            <div class="caption">
-              <h3> Title</h3>
-              <hr>
-            </div>
-          </div>         
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-6 p-2">
-        <div class='content'>
-          <div class="promo image">
-            <img src="fine6.png">
-            <div class="caption">
-              <h3> Title</h3>
-              <hr>
-            </div>
-          </div>         
-        </div>
-      </div>
-      <div class="col-lg-6 p-2">
-        <div class='content'>
-          <div class="promo image">
-            <img src="fine7.png">
-            <div class="caption">
-              <h3> Title</h3>
-              <hr>
-            </div>
-          </div>         
-        </div>
-      </div>
-    </div>
-</div>
      </div>
-      </div>
-    </div>
-    <div class="container text-center">
-      <h1 style="color: #5b5b5b">Services</h1>
-      <ul class="service_list">
-        <li>Responsive & Mobile Friendly Website.</li>
-        <li>Back-End Development.</li>
-        <li>Content Management Systems.</li>
-        <li>Graphic Designing.</li>
-        <li>SEO, SMO.</li>
-      </ul>
-    </div>
+      </div> -->
+
+
     <div class="container d-flex justify-content-center mb-5">
       <button>VIEW WEBSITE</button>
-    </div>
+    </div> 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
-    const slider = document.querySelector('.slider');
-    const slides = document.querySelectorAll('.slide');
-    const totalSlides = slides.length;
-    let currentIndex = 0;
+      document.addEventListener("DOMContentLoaded", function () {
+        const slider = document.querySelector(".slider");
+        const slides = document.querySelectorAll(".slide");
+        const totalSlides = slides.length;
+        let currentIndex = 0;
 
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % totalSlides;
-        updateSlider();
-    }
+        function nextSlide() {
+          currentIndex = (currentIndex + 1) % totalSlides;
+          updateSlider();
+        }
 
-    function updateSlider() {
-        const translateValue = -currentIndex * 100;
-        slider.style.transform = `translateX(${translateValue}%)`;
-    }
+        function updateSlider() {
+          const translateValue = -currentIndex * 100;
+          slider.style.transform = `translateX(${translateValue}%)`;
+        }
 
-    // Automatic slide every 3 seconds
-    setInterval(nextSlide, 3000);
-});
+        // Automatic slide every 3 seconds
+        setInterval(nextSlide, 3000);
+      });
     </script>
   </body>
 </html>
